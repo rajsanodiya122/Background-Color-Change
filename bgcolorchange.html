@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Change</title>
+    <style>
+        html, body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        .container{
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        .box{
+            align-items: center;
+
+        }
+    </style>
+</head> 
+<body>
+    <div class="container">
+        <div class="box"><button onclick="changeBackgroundColor()">Change Background</button></div>
+    </div>
+
+    <script>
+        let colors = ['red','blue','black'];
+        let currentColorIndex =0;
+
+        function changeBackgroundColor(){
+            document.body.style.backgroundColor = colors[currentColorIndex];
+
+            currentColorIndex = (currentColorIndex+1)%colors.length;
+        }
+    </script>
+</body>
+</html>
